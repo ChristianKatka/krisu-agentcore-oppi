@@ -1,0 +1,40 @@
+The Core Idea: You give the agent your interests (tech, AI, specific topics), it monitors sources throughout the day, summarizes what matters, and you can query it later like "what were the main AI news today?"
+
+Architecture - how the pieces fit:
+
+Agent Core Runtime would run two types of agents:
+
+Collector Agent - runs every hour (scheduled), fetches from RSS/APIs, does initial filtering
+Summarizer Agent - processes collected content, uses LLM to summarize
+Query Agent - handles your questions about the collected content
+Agent Core Gateway exposes:
+
+POST /sources - add/remove RSS feeds or subreddits
+GET /summaries - get today's digest
+POST /ask - natural language queries like "what's trending in AI?"
+GET /search - search through historical summaries
+Agent Core Identity with Cognito:
+
+Each user has their own sources and preferences
+Your summaries are private to you
+Could have "free tier" (10 sources) vs "premium" (unlimited)
+Questions for you:
+
+What sources interest you? HackerNews? Specific subreddits? Tech blogs? This affects which APIs we'd use.
+
+Storage strategy - where should summaries live?
+
+Google Drive (you mentioned this) - good for portability
+DynamoDB - better for querying/searching
+Both? (summaries in Drive, metadata in DynamoDB)
+How smart should the agent be?
+
+Simple: Just summarize everything
+Medium: Filter by relevance to your interests
+Advanced: Learn over time what you actually read vs skip
+React frontend features - what's most important?
+
+Feed reader style (like Feedly)?
+Dashboard with highlights?
+Chat interface to ask questions?
+All of the above?

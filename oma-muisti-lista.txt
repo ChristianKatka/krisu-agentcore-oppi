@@ -1,0 +1,18 @@
+
+
+agent core runtime, se hostaa ne agentit
+
+
+ agentcore gateway avulla voi exposaa omia api end pointteja. eli esim mul on risun-reseptit.fi/get 
+
+ agentcore identity liittyy cognitoo ja autentikointiin
+
+
+
+
+ iha ekana python virtual environment pystyyn projekti kohtasesti.
+
+ python3.12 -m venv venv
+ source venv/bin/activate
+ ja sit strandi käyttöön:
+pip install strands-agents
