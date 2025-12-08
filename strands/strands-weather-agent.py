@@ -1,5 +1,10 @@
+
+import os
 from strands import Agent
 from strands_tools import http_request
+
+# Set AWS region
+os.environ["AWS_DEFAULT_REGION"] = "us-east-1"
 
 # Define a weather-focused system prompt
 WEATHER_SYSTEM_PROMPT = """You are a weather assistant with HTTP capabilities. You can:
@@ -29,4 +34,4 @@ weather_agent = Agent(
 
 
 # Let the agent handle the API details
-response = weather_agent("What's the weather like in Seattle?")
+weather_agent("What's the weather like in Houston?")

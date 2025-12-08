@@ -15,4 +15,21 @@ agent core runtime, se hostaa ne agentit
  python3.12 -m venv venv
  source venv/bin/activate
  ja sit strandi käyttöön:
-pip install strands-agents
+pip install strands-agents // asentaa ton virtual envi sisää paketit
+pip install strands-agents-tools // saa toolit käyttöön esim http_request
+
+sit kato et terminaalis oikeudet käyttää claudee
+aws bedrock list-foundation-models --region us-east-1 | grep claude-sonnet-4
+
+
+python -u strands/hello-world.py // -u meinaa unbuffered. eli antaa striimatu vastaukse
+python -u strands/strands-weather-agent.py
+
+
+
+
+
+
+
+
+
