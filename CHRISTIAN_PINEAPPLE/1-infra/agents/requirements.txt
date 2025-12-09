@@ -2,7 +2,7 @@
 strands-agents>=1.0.0
 strands-agents-tools>=0.2.15
 requests>=2.31.0
-
+boto3>=1.40.0
 
 
 

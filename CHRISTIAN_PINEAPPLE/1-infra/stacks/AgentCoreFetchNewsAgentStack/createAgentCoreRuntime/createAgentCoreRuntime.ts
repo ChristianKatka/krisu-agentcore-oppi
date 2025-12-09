@@ -4,12 +4,7 @@ import { UserPool, UserPoolClient } from "aws-cdk-lib/aws-cognito";
 import { Platform } from "aws-cdk-lib/aws-ecr-assets";
 import { IRole } from "aws-cdk-lib/aws-iam";
 import { Construct } from "constructs";
-import {
-  projectName,
-  projectNamePascal,
-  tenantName,
-  tenantNamePascal,
-} from "../../../constants";
+import { projectNamePascal, tenantNamePascal } from "../../../constants";
 
 export const createAgentCoreRuntime = (
   stack: Construct,
@@ -33,15 +28,15 @@ export const createAgentCoreRuntime = (
   });
 
   const logicalId = `${envName}${projectNamePascal}${tenantNamePascal}FetchNewsAgentRuntime`;
-  const name = `${projectNamePascal}_fetch_news_agent_runtime`; // must be less than or equal to 48 characters and casing this weird
+  const name = `${projectNamePascal}_fetch_news_agent_runtime_no`; // must be less than or equal to 48 characters and casing this weird
 
   new agentcore.Runtime(stack, logicalId, {
     runtimeName: name,
     executionRole: role,
     agentRuntimeArtifact: artifact,
-    authorizerConfiguration:
-      agentcore.RuntimeAuthorizerConfiguration.usingCognito(userPool, [
-        userPoolClient,
-      ]),
+    // authorizerConfiguration:
+    //   agentcore.RuntimeAuthorizerConfiguration.usingCognito(userPool, [
+    //     userPoolClient,
+    //   ]),
   });
 };

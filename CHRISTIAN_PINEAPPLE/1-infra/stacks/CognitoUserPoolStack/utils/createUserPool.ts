@@ -1,4 +1,4 @@
-import { Stack } from "aws-cdk-lib";
+import { RemovalPolicy, Stack } from "aws-cdk-lib";
 import { UserPool, VerificationEmailStyle } from "aws-cdk-lib/aws-cognito";
 import {
   projectName,
@@ -23,6 +23,8 @@ export const createUserPool = (stack: Stack, envName: string) => {
     userVerification: {
       emailStyle: VerificationEmailStyle.CODE,
     },
+    removalPolicy:
+      envName === "dev" ? RemovalPolicy.DESTROY : RemovalPolicy.RETAIN,
   });
 
   return userPool;

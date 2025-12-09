@@ -19,7 +19,10 @@ export const createUserPoolClient = (
     userPool,
     userPoolClientName: name,
     generateSecret: false,
-
+    authFlows: {
+      userPassword: true,
+      userSrp: true,
+    },
     oAuth: {
       flows: {
         authorizationCodeGrant: true,
