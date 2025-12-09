@@ -1,0 +1,21 @@
+# Blueberry News Aggregator - Python Dependencies
+# Similar to package.json in Node.js
+
+# Core dependencies for Phase 1 (Local Development)
+strands-agents>=1.0.0
+strands-agents-tools>=0.2.15
+requests>=2.31.0
+
+# AWS dependencies (needed for Phase 2+)
+boto3>=1.40.0
+botocore>=1.40.0
+
+# Agent Core (needed for Phase 2+)
+bedrock-agentcore
+
+# Optional: Better development experience
+python-dotenv>=1.0.0  # For environment variables
+
+
+
+

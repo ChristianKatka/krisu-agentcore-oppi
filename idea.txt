@@ -1,4 +1,5 @@
-The Core Idea: You give the agent your interests (tech, AI, specific topics), it monitors sources throughout the day, summarizes what matters, and you can query it later like "what were the main AI news today?"
+The Core Idea: You give the agent your interests (tech, AI, specific topics), it monitors sources throughout the day, summarizes what matters, 
+and you can query it later like "what were the main AI news today?"
 
 Architecture - how the pieces fit:
 

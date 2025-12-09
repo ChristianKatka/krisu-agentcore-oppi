@@ -1,11 +1,12 @@
 # Python
-venv/
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
 env/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -24,7 +25,6 @@ wheels/
 
 # Environment variables
 .env
-.env.local
 
 # IDE
 .vscode/
@@ -40,16 +40,19 @@ Thumbs.db
 # AWS
 .aws/
 
+# CDK
+cdk.out/
+.cdk.staging/
+
 # Logs
 *.log
 
-# Testing
+# Test
 .pytest_cache/
 .coverage
 htmlcov/
 
-# Node (for React frontend later)
-node_modules/
-
-agentcore-samples/
-agent-core-example/
+# Data files
+data/
+*.json
+*.csv

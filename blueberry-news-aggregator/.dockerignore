@@ -1,0 +1,47 @@
+# Ignore CDK output directory (prevents recursive copying)
+phase2_agentcore/deployment/cdk.out/
+**/cdk.out/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (not needed in container)
+*.md
+!requirements.txt
+
+# Phase 1 local files (not needed in container)
+phase1_local/
+
+# Deployment files (not needed in container)
+phase2_agentcore/deployment/
+
+# Test files
+**/test_*.py

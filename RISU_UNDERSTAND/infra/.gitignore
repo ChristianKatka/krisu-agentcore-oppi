@@ -1,0 +1,13 @@
+# CDK output
+cdk.out/
+.cdk.staging/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/

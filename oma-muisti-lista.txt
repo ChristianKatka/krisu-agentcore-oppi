@@ -24,12 +24,14 @@ aws bedrock list-foundation-models --region us-east-1 | grep claude-sonnet-4
 
 python -u strands/hello-world.py // -u meinaa unbuffered. eli antaa striimatu vastaukse
 python -u strands/strands-weather-agent.py
+python -u strands/content-aggregator-agent.py
 
 
 
 
-
-
-
+Agent Core Runtime - Hosts agents in containers (ECR)
+Agent Core Gateway - API endpoints with custom domains
+Agent Core Identity - Cognito authentication
+MCP Servers - Tools/integrations for agents
 
 
